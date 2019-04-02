@@ -31,10 +31,14 @@ class Cocktail extends Component {
 		console.log(this.state.cocktail);
 	};
 
+	renderCocktail = () => {
+		return this.state.cocktail.map((cocktail, key) => <p key={key}>{cocktail.name}</p>);
+	};
+
 	render() {
 		return (
 			<div>
-				<div>{this.state.cocktail.map((cocktail, key) => <p key={key}>{cocktail.name}</p>)}</div>
+				<div>{this.renderCocktail()}</div>
 				<AddCocktail fbi={this.addCockTailToState} />
 			</div>
 		);
