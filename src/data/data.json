@@ -11,14 +11,6 @@
     {
       "id": 3,
       "name": "Bloody Mary"
-    },
-    {
-      "id": 4,
-      "name": "Mojito"
-    },
-    {
-      "name": "Testing the input with enter key",
-      "id": 5
     }
   ]
 }

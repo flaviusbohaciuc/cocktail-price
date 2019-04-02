@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AddCocktail from './add-cocktail';
 import { BASE_URL } from './constant';
 import axios from 'axios';
-import './cocktail.css'
+import './cocktail.css';
 
 class Cocktail extends Component {
 	state = {
@@ -18,7 +18,7 @@ class Cocktail extends Component {
 		this.getCocktail();
 	}
 
-	addCockTailToState = (something) => {
+	addCocktailToState = (something) => {
 		console.log(`Just added ${something}`);
 		this.setState({
 			cocktail: [
@@ -41,11 +41,26 @@ class Cocktail extends Component {
 		));
 	};
 
+	async deleteCocktail(id) {
+		console.log(`cocktail with id "${id}" has been deleted`);
+		await axios
+			.delete(`${BASE_URL}cocktail/${id}`, {
+				'Content-Type': 'application/json',
+				method: 'DELETE'
+			})
+			.then((result) => {
+				// remove the cocktail from state
+				this.setState({
+					cocktail: this.state.cocktail.filter((cocktail) => cocktail.id !== id)
+				});
+			});
+	}
+
 	render() {
 		return (
 			<div>
 				<div>{this.renderCocktail()}</div>
-				<AddCocktail fbi={this.addCockTailToState} />
+				<AddCocktail fbi={this.addCocktailToState} />
 			</div>
 		);
 	}
