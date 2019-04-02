@@ -1,20 +1,20 @@
 {
-    "cocktail":[
-        {
-            "id": 1,
-            "name": "Cosmopolitan"
-        },
-        {
-            "id": 2,
-            "name": "Porn Star Martini"
-        },
-        {
-            "id": 3,
-            "name": "Bloody Mary"
-        },
-        {
-            "id": 4,
-            "name": "Mojito"
-        }
-    ] 
+  "cocktail": [
+    {
+      "id": 1,
+      "name": "Cosmopolitan"
+    },
+    {
+      "id": 2,
+      "name": "Porn Star Martini"
+    },
+    {
+      "id": 3,
+      "name": "Bloody Mary"
+    },
+    {
+      "id": 4,
+      "name": "Mojito"
+    }
+  ]
 }
